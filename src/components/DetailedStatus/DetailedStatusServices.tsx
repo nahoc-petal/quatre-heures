@@ -3,6 +3,7 @@ import * as React from 'react';
 import { legendLabels } from './constants';
 
 const serviceStyle = {
+  backgroundColor: '#ffffff',
   border: '1px solid #e8e8e8',
   borderTop: 'none',
   marginBottom: 0,

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'bell-slim';
+  src: url(fonts/bellslim_regular-webfont.eot);
+  src: url(fonts/bellslim_regular-webfont.eot?#iefix) format('embedded-opentype'), 
+       url(fonts/bellslim_regular-webfont.woff) format('woff'), 
+       url(fonts/bellslim_regular-webfont.ttf) format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bell-slim';
+  src: url(fonts/bellslim_medium-webfont.eot);
+  src: url(fonts/bellslim_medium-webfont.eot?#iefix) format('embedded-opentype'), 
+       url(fonts/bellslim_medium-webfont.woff) format('woff'), 
+       url(fonts/bellslim_medium-webfont.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bell-slim';
+  src: url(fonts/bellslim_semibold-webfont.eot);
+  src: url(fonts/bellslim_semibold-webfont.eot?#iefix) format('embedded-opentype'), 
+       url(fonts/bellslim_semibold-webfont.woff) format('woff'), 
+       url(fonts/bellslim_semibold-webfont.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  font-family: 'bell-slim';
+}
+
+.navbar-item {
+  font-family: 'bell-slim';
+  font-weight: 600;
+  font-size: 1.2rem;
+}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { I18n } from 'react-i18nify';
+import { Translate } from 'react-i18nify';
 import { 
   ActualStatus, 
   DetailedStatus, 
@@ -14,12 +14,13 @@ export class StatusPage extends React.Component {
       <section className="section">
 
         <Notification
-          message={I18n.t('application.title')}
+          message={<Translate value="welcomeMessage" />}
+          type={'is-primary'}
         />
 
         <ActualStatus 
-          title={'Smooth sailing!'}
-          subtitle={'Nothing to report here. Slack is up and running normally.'}
+          title={'Everything running smoothly!'}
+          subtitle={'Nothing to report here. Bell is up and running normally.'}
         />
 
         <DetailedStatus />

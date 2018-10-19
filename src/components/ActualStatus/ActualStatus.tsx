@@ -6,12 +6,18 @@ interface IActualStatusProps {
   subtitle: string;
 }
 
+const titleStyle = {
+  padding: '1rem 0rem 0.5rem 0rem',
+}
+
 export const ActualStatus: React.SFC<IActualStatusProps> = ({ title, subtitle }) => (
   <div className="hero has-text-centered">
     <div className="hero-body">
       <div className="container">
-        <img src="https://status.slack.com/img/v2/Ok@2x.png" width="197" height="188" />
-        <h1 className="title">
+        <span className="icon is-large has-text-success">
+          <i className="fas fa-3x fa-check-circle" />
+        </span>
+        <h1 style={titleStyle} className="title">
           {title}
         </h1>
         <h2 className="subtitle">
