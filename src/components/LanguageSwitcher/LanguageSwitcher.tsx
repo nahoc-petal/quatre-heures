@@ -6,13 +6,11 @@ const changeLanguage = () => {
   I18n._locale === 'en' ? I18n.setLocale('fr') : I18n.setLocale('en');
 }
 
-export const LanguageSwitcher: React.SFC<{}> = (props :any) => {
-  return (
-    <a 
-      className="navbar-item"
-      onClick={changeLanguage}
-    >
-      <Translate value="alternateLanguage" />
-    </a>
-  );
-}
+export const LanguageSwitcher: React.SFC = () => (
+  <a 
+    className="navbar-item"
+    onClick={changeLanguage}
+  >
+    <Translate value="alternateLanguage" />
+  </a>
+)

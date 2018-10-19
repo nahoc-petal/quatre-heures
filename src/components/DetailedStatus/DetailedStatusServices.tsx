@@ -9,13 +9,24 @@ const serviceStyle = {
   padding: '1.5rem',
 }
 
+const externalLinkStyle = {
+  fontSize: '12px',
+};
+
 export const DetailedStatusServices: React.SFC = () => (
   <div>
     <div style={serviceStyle} className="level">
       <div className="level-left">
         <div>
-          <h3 className="subtitle">Login/SSO</h3>
-          <h4>No issues</h4>
+          <a title="Voir sur Jira" target="_blank" href="#">
+            Login/SSO&nbsp;
+            <span style={externalLinkStyle} className="icon">
+              <i className="fas fa-external-link-alt" />
+            </span>
+          </a>
+          <p>
+            <small>No issues</small>
+          </p>
         </div>
       </div>
       <div className="level-right">
@@ -27,8 +38,15 @@ export const DetailedStatusServices: React.SFC = () => (
     <div style={serviceStyle} className="level">
       <div className="level-left">
         <div>
-          <h3 className="subtitle">Connectivity</h3>
-          <h4>No issues</h4>
+          <a title="Voir sur Jira" target="_blank" href="#">
+            Login/SSO&nbsp;
+            <span style={externalLinkStyle} className="icon">
+              <i className="fas fa-external-link-alt" />
+            </span>
+          </a>
+          <p>
+            <small>No issues</small>
+          </p>
         </div>
       </div>
       <div className="level-right">

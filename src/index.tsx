@@ -1,3 +1,4 @@
+import 'bulma-timeline/dist/css/bulma-timeline.min.css'
 import 'bulma/css/bulma.css'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

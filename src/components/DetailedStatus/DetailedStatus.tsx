@@ -3,12 +3,7 @@ import * as React from 'react';
 import { DetailedStatusHeader } from './DetailedStatusHeader';
 import { DetailedStatusServices } from './DetailedStatusServices';
 
-interface IActualStatusProps {
-  title: string;
-  subtitle: string;
-}
-
-export const DetailedStatus: React.SFC<IActualStatusProps> = ({ title, subtitle }) => (
+export const DetailedStatus: React.SFC = () => (
   <section className="section">
     <div className="container">
       <DetailedStatusHeader />
