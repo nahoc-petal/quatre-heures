@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { I18n } from 'react-i18nify';
 import { ActualStatus, DetailedStatus, Notification } from './../../components';
 
 export class StatusPage extends React.Component {
@@ -9,11 +10,14 @@ export class StatusPage extends React.Component {
   }
 
   public render() {
+
+    console.log(I18n);
+
     return (
       <section className="section">
 
         <Notification
-          message={'Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Sit amet, consectetur adipiscing elit'}
+          message={I18n.t('application.title')}
         />
 
         <ActualStatus 

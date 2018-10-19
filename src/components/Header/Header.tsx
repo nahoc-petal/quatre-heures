@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { Translate } from 'react-i18nify';
 import { Link } from 'react-router-dom';
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import logo from './../../assets/logo.svg';
 
 const navbarStyle = {
@@ -29,12 +31,16 @@ export const Header: React.SFC<{}> = (props :any) => {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <Link className="navbar-item" to="/">Home</Link>
-            <Link className="navbar-item" to="/history">History</Link>
+            <Link className="navbar-item" to="/">
+              <Translate value="navigation.home" />
+            </Link>
+            <Link className="navbar-item" to="/history">
+              <Translate value="navigation.history" />
+            </Link>
           </div>
 
           <div className="navbar-end">
-            <Link className="navbar-item" to="/">English</Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

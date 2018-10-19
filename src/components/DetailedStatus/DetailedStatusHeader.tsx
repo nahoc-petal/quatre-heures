@@ -1,5 +1,6 @@
 // Stateless component that returns the detailed status header
 import * as React from 'react';
+import { I18n } from 'react-i18nify';
 import { legendLabels } from './constants';
 
 const legendStyle = {
@@ -19,7 +20,7 @@ const legendLabelStyle = {
 
 export const DetailedStatusHeader: React.SFC = () => (
   <header style={legendStyle} className="level">
-    <div className="level-left">Current status by service</div>
+    <div className="level-left">{I18n.t('application.title')}</div>
     <div className="level-right">
       {legendLabels.map((legendLabel, index) => {
         return(
