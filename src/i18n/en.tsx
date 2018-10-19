@@ -3,6 +3,9 @@ const en = {
   detailedStatus: {
     currentStatusByService: 'Current status by service',
   },
+  labels: {
+    history: 'Historique',
+  },
   navigation: {
     history: 'History',
     home: 'Home',

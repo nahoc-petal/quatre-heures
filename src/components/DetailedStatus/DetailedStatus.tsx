@@ -1,8 +1,11 @@
-// Stateless component that returns detailed status of all the servers
 import * as React from 'react';
 import { Loader } from '../Loader/Loader';
 import { DetailedStatusHeader } from './DetailedStatusHeader';
 import { DetailedStatusServices } from './DetailedStatusServices';
+
+interface IDetailedStatus {
+  services: any | null;
+}
 
 const loaderStyle = {
   backgroundColor: '#ffffff',
@@ -14,20 +17,18 @@ const loaderStyle = {
   marginBottom: 0,
 }
 
-export const DetailedStatus: React.SFC<any> = ({ services }) => (
-  <section className="section">
-    <div className="container">
-      <DetailedStatusHeader />
-      {services ?
-        <DetailedStatusServices 
-          services={services}
-        />
-      :
-        <Loader 
-          size={'is-large'}
-          style={loaderStyle}
-        />
-      }
-    </div>
-  </section>
+export const DetailedStatus: React.SFC<IDetailedStatus> = ({ services }) => (
+  <React.Fragment>
+    <DetailedStatusHeader />
+    {services ?
+      <DetailedStatusServices 
+        services={services}
+      />
+    :
+      <Loader 
+        size={'is-large'}
+        style={loaderStyle}
+      />
+    }
+  </React.Fragment>
 );

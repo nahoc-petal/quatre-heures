@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Translate } from 'react-i18nify';
+import { ShowMore } from '../../components/ShowMore/ShowMore';
 import { 
   ActualStatus, 
   DetailedStatus, 
@@ -11,6 +12,7 @@ import { getStatus } from './StatusPage.service';
 export class StatusPage extends React.Component {
 
   state = {
+    isLoadingMore: false,
     services: null,
   };
 
@@ -20,11 +22,17 @@ export class StatusPage extends React.Component {
     this.setState({
       services,
     });
-    console.log(services);
+  }
+
+  loadMore = () => {
+    this.setState({
+      isLoadingMore: true,
+    });
   }
 
   render() {
     const {
+      isLoadingMore,
       services,
     } = this.state;
 
@@ -41,11 +49,33 @@ export class StatusPage extends React.Component {
           subtitle={'Nothing to report here. Bell is up and running normally.'}
         />
 
-        <DetailedStatus 
-          services={services}
-        />
+        <section className="section">
+          <div className="container">
+            <DetailedStatus 
+              services={services}
+            />
+            {services &&
+              <React.Fragment>
+                <br/>
+                <ShowMore
+                  onClickHandler={this.loadMore} 
+                  isLoading={isLoadingMore}
+                />
+              </React.Fragment>
+            }
+          </div>
+        </section>
 
-        <History />
+        <div className="container">
+          <div className="columns is-gapless">
+            <div className="column is-half">
+              <History />
+            </div>
+            <div className="column is-half">
+              <History />
+            </div>
+          </div>
+        </div>
       </section>
     );
   }

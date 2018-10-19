@@ -13,7 +13,7 @@ const historyHeaderStyle = {
 export const HistoryHeader: React.SFC = () => (
   <header style={historyHeaderStyle} className="level">
     <div className="level-left">
-      <Translate value="detailedStatus.currentStatusByService" />
+      <Translate value="labels.history" />
     </div>
   </header>
 );

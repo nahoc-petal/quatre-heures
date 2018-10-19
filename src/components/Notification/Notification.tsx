@@ -8,13 +8,40 @@ interface INotificationProps {
   type?: NotificationType,
 }
 
-export const Notification: React.SFC<INotificationProps> = ({ message, type }) => {
-  return (
-    <div className="container">
-      <div className={`notification ${type}`}>
-        <button className="delete" />
-        {message}
+export class Notification extends React.Component<INotificationProps> {
+
+  state = {
+    visible: true,
+  }
+
+  closeNotification = () => {
+    this.setState({ 
+      visible: false,
+    });
+  }
+
+  render() {
+    const {
+      visible,
+    } = this.state;
+
+    const {
+      message,
+      type,
+    } = this.props;
+
+    return (
+      <div className="container">
+        {visible &&
+          <div className={`notification ${type}`}>
+            <button 
+              onClick={this.closeNotification}
+              className="delete" 
+            />
+            {message}
+          </div>
+        }
       </div>
-    </div>
-  );
+    );
+  }
 }
