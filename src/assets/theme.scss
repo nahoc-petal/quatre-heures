@@ -19,3 +19,7 @@ $fullhd-enabled: false;
 // Import Bulma
 @import '~bulma/bulma.sass';
 @import '~bulma-timeline/src/sass/index.sass';
+
+.button.is-white.is-loading::after {
+  border-color: transparent transparent $primary $primary !important;
+}

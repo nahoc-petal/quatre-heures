@@ -3,7 +3,7 @@ import * as React from 'react';
 export class HistoryPage extends React.Component {
 
 
-  public render() {
+  render() {
     return (
       <section className="section">
 

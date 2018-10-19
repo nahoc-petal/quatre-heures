@@ -14,7 +14,7 @@ const externalLinkStyle = {
   fontSize: '12px',
 };
 
-export const DetailedStatusServices: React.SFC = () => (
+export const DetailedStatusServices: React.SFC<any> = ({ services }) => (
   <div>
     <div style={serviceStyle} className="level">
       <div className="level-left">

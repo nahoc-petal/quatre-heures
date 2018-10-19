@@ -6,10 +6,28 @@ import {
   History, 
   Notification, 
 } from './../../components';
+import { getStatus } from './StatusPage.service';
 
 export class StatusPage extends React.Component {
 
-  public render() {
+  state = {
+    services: null,
+  };
+
+  async componentDidMount() {
+    const services = await getStatus();
+
+    this.setState({
+      services,
+    });
+    console.log(services);
+  }
+
+  render() {
+    const {
+      services,
+    } = this.state;
+
     return (
       <section className="section">
 
@@ -23,7 +41,9 @@ export class StatusPage extends React.Component {
           subtitle={'Nothing to report here. Bell is up and running normally.'}
         />
 
-        <DetailedStatus />
+        <DetailedStatus 
+          services={services}
+        />
 
         <History />
       </section>
