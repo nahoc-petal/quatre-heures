@@ -3,7 +3,7 @@ import { I18n, Translate } from 'react-i18nify';
 import { ShowMore } from '../../components/ShowMore/ShowMore';
 import { renderHead } from '../../utils/renderHead';
 import { 
-  ActualStatus, 
+  ActualStatusContainer, 
   DetailedStatus, 
   FutureMaintenances,
   History, 
@@ -50,10 +50,7 @@ export class StatusPage extends React.Component {
           />
         </div>
 
-        <ActualStatus 
-          title={'Everything running smoothly!'}
-          subtitle={'Nothing to report here. Bell is up and running normally.'}
-        />
+        <ActualStatusContainer />
 
         <section className="section">
           <div className="container">

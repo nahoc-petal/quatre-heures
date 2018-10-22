@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import { APP_SEPARATOR, APP_TITLE } from '../config/constants';
+import { APP_SEPARATOR, APP_TITLE } from '../common/constants/appInfo';
 
 export const renderHead = (title: string | JSX.Element) => (
   <Helmet>
