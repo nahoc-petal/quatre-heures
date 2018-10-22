@@ -5,6 +5,7 @@ import { renderHead } from '../../utils/renderHead';
 import { 
   ActualStatus, 
   DetailedStatus, 
+  FutureMaintenances,
   History, 
   Notification, 
 } from './../../components';
@@ -77,7 +78,7 @@ export class StatusPage extends React.Component {
               <History />
             </div>
             <div className="column is-half">
-              <History />
+              <FutureMaintenances />
             </div>
           </div>
         </div>

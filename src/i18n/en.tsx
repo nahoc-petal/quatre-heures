@@ -6,11 +6,13 @@ const en = {
   filters: {
     searchByDate: 'Search by date',
     searchByName: 'Search by name',
+    searchByService: 'Search by service',
     searchByStatus: 'Search by status',
     searchByTags: 'Search by tags',
   },
   labels: {
     filters: 'Filters',
+    futureMaintenances: 'Future maintenances',
     history: 'History',
   },
   navigation: {
