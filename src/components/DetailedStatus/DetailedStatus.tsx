@@ -1,3 +1,4 @@
+import { css, StyleSheet } from 'aphrodite';
 import * as React from 'react';
 import { Loader } from '../Loader/Loader';
 import { DetailedStatusHeader } from './DetailedStatusHeader';
@@ -7,15 +8,19 @@ interface IDetailedStatus {
   services: any | null;
 }
 
-const loaderStyle = {
-  backgroundColor: '#ffffff',
-  border: '1px solid #e8e8e8',
-  borderTop: 'none',
-  borderTopLeftRadius: 0,
-  borderTopRightRadius: 0,
-  height: '80px',
-  marginBottom: 0,
-}
+const styles = StyleSheet.create({
+  loaderStyle: {
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+    border: '1px solid #e8e8e8',
+    borderTop: 'none',
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    display: 'flex',
+    height: '80px',
+    justifyContent: 'center',
+  }
+});
 
 export const DetailedStatus: React.SFC<IDetailedStatus> = ({ services }) => (
   <React.Fragment>
@@ -25,10 +30,11 @@ export const DetailedStatus: React.SFC<IDetailedStatus> = ({ services }) => (
         services={services}
       />
     :
-      <Loader 
-        size={'is-large'}
-        style={loaderStyle}
-      />
+      <div className={`${css(styles.loaderStyle)}`}>
+        <Loader 
+          size={'is-large'}
+        />
+      </div>
     }
   </React.Fragment>
 );

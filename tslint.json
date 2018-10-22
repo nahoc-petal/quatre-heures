@@ -8,6 +8,7 @@
     ]
   },
   "rules": {
+    "no-unused-expression": [true, "allow-fast-null-checks"],
     "no-console": false,
     "member-ordering": false,
     "member-access": [true, "no-public"],

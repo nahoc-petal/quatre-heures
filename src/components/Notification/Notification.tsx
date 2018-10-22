@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import { Link } from 'react-router-dom';
 
 type NotificationType = "is-primary" | "is-danger";
 
@@ -31,7 +30,7 @@ export class Notification extends React.Component<INotificationProps> {
     } = this.props;
 
     return (
-      <div className="container">
+      <React.Fragment>
         {visible &&
           <div className={`notification ${type}`}>
             <button 
@@ -41,7 +40,7 @@ export class Notification extends React.Component<INotificationProps> {
             {message}
           </div>
         }
-      </div>
+      </React.Fragment>
     );
   }
 }

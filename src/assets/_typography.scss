@@ -28,6 +28,9 @@
   font-style: normal;
 }
 
+// Overwrite Bulma
+$family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

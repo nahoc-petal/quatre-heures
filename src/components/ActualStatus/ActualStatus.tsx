@@ -1,4 +1,4 @@
-// Stateless component that returns the actual status of all the servers
+import { css, StyleSheet } from 'aphrodite';
 import * as React from 'react';
 
 interface IActualStatusProps {
@@ -6,9 +6,12 @@ interface IActualStatusProps {
   subtitle: string;
 }
 
-const titleStyle = {
-  padding: '1rem 0rem 0.5rem 0rem',
-}
+const styles = StyleSheet.create({
+  titleStyle: {
+    padding: '1rem 0rem 0.5rem 0rem',
+  }
+});
+
 
 export const ActualStatus: React.SFC<IActualStatusProps> = ({ title, subtitle }) => (
   <div className="hero has-text-centered">
@@ -17,7 +20,7 @@ export const ActualStatus: React.SFC<IActualStatusProps> = ({ title, subtitle })
         <span className="icon is-large has-text-success">
           <i className="fas fa-3x fa-check-circle" />
         </span>
-        <h1 style={titleStyle} className="title">
+        <h1 className={`${css(styles.titleStyle)} title`}>
           {title}
         </h1>
         <h2 className="subtitle">

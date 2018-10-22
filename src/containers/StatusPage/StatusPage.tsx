@@ -39,10 +39,12 @@ export class StatusPage extends React.Component {
     return (
       <section className="section">
 
-        <Notification
-          message={<Translate value="welcomeMessage" />}
-          type={'is-primary'}
-        />
+        <div className="container">
+          <Notification
+            message={<Translate value="welcomeMessage" />}
+            type={'is-primary'}
+          />
+        </div>
 
         <ActualStatus 
           title={'Everything running smoothly!'}

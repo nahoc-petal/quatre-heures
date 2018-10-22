@@ -3,10 +3,9 @@ import * as React from 'react';
 import { Translate } from 'react-i18nify';
 
 const styles = StyleSheet.create({
-  historyHeader: {
+  legendStyle: {
     backgroundColor: '#fafafa',
     border: '1px solid #e8e8e8',
-    borderRight: 0,
     height: '56px',
     marginBottom: 0,
     padding: '0 1.5rem',
@@ -14,10 +13,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export const HistoryHeader: React.SFC = () => (
-  <header className={`${css(styles.historyHeader)} level`}>
+export const FiltersHeader: React.SFC = () => (
+  <header className={`${css(styles.legendStyle)} level`}>
     <div className="level-left">
-      <Translate value="labels.history" />
+      <Translate value="labels.filters" />
     </div>
   </header>
 );

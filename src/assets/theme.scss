@@ -6,19 +6,19 @@
 // Set your brand colors
 @import 'colors';
 
-// Update Bulma's global variables
-$family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$primary: $blue;
-$link: $blue;
-$fullhd-enabled: false;
-
-// Update some of Bulma's component variables
-// $body-background-color: #fff;
+// Layout specific stuff
+@import 'layout';
 
 // Import Bulma
 @import '~bulma/bulma.sass';
 @import '~bulma-timeline/src/sass/index.sass';
 
+// Loader
 .button.is-white.is-loading::after {
   border-color: transparent transparent $primary $primary !important;
 }
+
+// History
+.timeline .timeline-item .timeline-content {
+  padding: 0.75em 0 0 2em!important;
+} 

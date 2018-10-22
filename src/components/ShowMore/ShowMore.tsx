@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Translate } from 'react-i18nify';
 
 interface IShowMore {
   isLoading?: boolean;
@@ -13,7 +14,7 @@ export const ShowMore: React.SFC<IShowMore> = ({ isLoading, onClickHandler }) =>
       className={`button is-primary is-outlined ${isLoading && 'is-loading'}`}
       disabled={isLoading}
     >
-      Show more
+      <Translate value="showMore" />
     </button>
   </div>
 )

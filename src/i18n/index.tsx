@@ -6,4 +6,4 @@ export const strings = {
   fr,
 };
 
-export const missingTranslation = (key: any) => (`Missing translation: ${key}`);
+export const missingTranslation = (key: string) => (`Missing translation: ${key}`);

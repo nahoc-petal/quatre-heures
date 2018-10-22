@@ -13,4 +13,4 @@ export const LanguageSwitcher: React.SFC = () => (
   >
     <Translate value="alternateLanguage" />
   </a>
-)
+);
