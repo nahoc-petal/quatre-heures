@@ -3,7 +3,6 @@ import * as ReactDOM from 'react-dom';
 import { I18n } from 'react-i18nify';
 import './assets/theme.scss';
 import { missingTranslation, strings } from './i18n';
-import registerServiceWorker from './registerServiceWorker';
 import { AppRouter } from './router';
 
 I18n.setTranslations(strings);
@@ -14,4 +13,3 @@ ReactDOM.render(
   <AppRouter />, 
   document.getElementById('root') as HTMLElement
 );
-registerServiceWorker();  

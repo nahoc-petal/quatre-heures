@@ -1,6 +1,6 @@
 import { css, StyleSheet } from 'aphrodite';
 import * as React from 'react';
-import { Translate } from 'react-i18nify';
+import { I18n, Translate } from 'react-i18nify';
 import { Link } from 'react-router-dom';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import logo from './../../assets/images/logo.svg';
@@ -21,8 +21,8 @@ export const Header: React.SFC = () => (
   <nav className={`${css(styles.navbarStyle)} navbar`} role="navigation" aria-label="main navigation">
     <div className="container">
       <div className="navbar-brand">
-        <Link className="navbar-item" to="/">
-          <img className={`${css(styles.brandStyle)}`} src={logo} height="38" />
+        <Link title={I18n.t("navigation.home")} className="navbar-item" to="/">
+          <img className={`${css(styles.brandStyle)}`} src={logo} height="38" alt="Logo" />
         </Link>
 
         <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -34,10 +34,10 @@ export const Header: React.SFC = () => (
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <Link className="navbar-item" to="/">
+          <Link title={I18n.t("navigation.home")} className="navbar-item" to="/">
             <Translate value="navigation.home" />
           </Link>
-          <Link className="navbar-item" to="/history">
+          <Link title={I18n.t("navigation.history")} className="navbar-item" to="/history">
             <Translate value="navigation.history" />
           </Link>
         </div>

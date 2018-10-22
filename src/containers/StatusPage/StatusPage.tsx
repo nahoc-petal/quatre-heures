@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Translate } from 'react-i18nify';
+import { I18n, Translate } from 'react-i18nify';
 import { ShowMore } from '../../components/ShowMore/ShowMore';
+import { renderHead } from '../../utils/renderHead';
 import { 
   ActualStatus, 
   DetailedStatus, 
@@ -38,6 +39,8 @@ export class StatusPage extends React.Component {
 
     return (
       <section className="section">
+
+        {renderHead(I18n.t('navigation.home'))}
 
         <div className="container">
           <Notification

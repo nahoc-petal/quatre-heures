@@ -34,6 +34,7 @@ export class Notification extends React.Component<INotificationProps> {
         {visible &&
           <div className={`notification ${type}`}>
             <button 
+              title="Delete"
               onClick={this.closeNotification}
               className="delete" 
             />

@@ -1,7 +1,7 @@
 const fr = {
   alternateLanguage: 'English',
   detailedStatus: {
-    currentStatusByService: 'Current status by service',
+    currentStatusByService: 'Statut courant par service',
   },
   filters: {
     searchByDate: 'Reacherche par date',
@@ -18,7 +18,7 @@ const fr = {
     home: 'Accueil',
   },
   showMore: 'Voir plus',
-  welcomeMessage: 'Bienvenue! Apply helper classes to almost any element, in order to alter its style',
+  welcomeMessage: 'Bienvenue! Ceci est en français.',
 };
 
 export default fr;

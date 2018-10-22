@@ -18,7 +18,7 @@ const en = {
     home: 'Home',
   },
   showMore: 'Show more',
-  welcomeMessage: 'Welcome! Apply helper classes to almost any element, in order to alter its style',
+  welcomeMessage: 'Welcome! This is in english.',
 };
 
 export default en;
